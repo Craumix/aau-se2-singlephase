@@ -34,21 +34,22 @@
         <Button
                 android:text="Abschicken"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/button"/>
+                android:layout_height="wrap_content" android:id="@+id/button" android:onClick="onSend"/>
         <Space
                 android:layout_width="match_parent"
-                android:layout_height="64px"/>
+                android:layout_height="64px" android:id="@+id/space"/>
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent" app:layout_constraintTop_toBottomOf="@+id/space"
+                android:layout_marginTop="8dp">
             <TextView
-                    android:text="Antwort:"
+                    android:text="Antwort: "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/textView3"/>
             <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_weight="1"/>
+                    android:layout_height="wrap_content" android:id="@+id/answerText" android:layout_weight="1"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
