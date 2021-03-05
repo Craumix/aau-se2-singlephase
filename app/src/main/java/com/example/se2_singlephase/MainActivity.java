@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
                 out.write(matrikelNummer.getBytes(StandardCharsets.UTF_8));
 
-                byte[] buffer = new byte[4096];
+                byte[] buffer = new byte[512];
                 String msg = "";
                 int read;
                 while((read = in.read(buffer)) != -1)
@@ -50,5 +50,12 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }).start();
+    }
+
+    public void onCalculate(View view) {
+        int quersumme = 0;
+        for(char c : numInput.getText().toString().toCharArray())
+            quersumme += Integer.parseInt(c + "");
+        answerView.setText(Integer.toBinaryString(quersumme));
     }
 }
