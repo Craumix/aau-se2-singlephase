@@ -31,10 +31,22 @@
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="64px"/>
-        <Button
-                android:text="Abschicken"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/button" android:onClick="onSend"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:gravity="center">
+            <Button
+                    android:text="Abschicken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/button" android:onClick="onSend"/>
+            <Space
+                    android:layout_width="64px"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:text="Berechnen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/button2" android:onClick="onSend"/>
+        </LinearLayout>
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="64px" android:id="@+id/space"/>
